@@ -1,0 +1,13 @@
+#!/bin/bash
+read -r -p "Are you sure you want to delete $1? [y|n]: " choice
+
+if [[ $choice == "n" ]]
+then
+	exit 1
+fi
+
+rm -rf ~/$1.git
+
+printf "Repo $1 deleted.\n"
+
+exit 0

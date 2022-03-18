@@ -1,0 +1,15 @@
+#!/bin/bash
+
+list=$(find ~/ -maxdepth 1 -name "*.git" -printf "%f\n")
+
+printf "List of all repos on the server:\n\n"
+
+IFS=$'\n'
+for line in $list
+do
+	linew=${line::-4}
+	printf "\t$linew\n"
+done
+unset IFS
+printf "\n"
+exit 0

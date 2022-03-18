@@ -1,0 +1,11 @@
+#!/bin/sh
+printf '\n'
+printf '%s\n' "Welcome to $(hostname -f)"
+printf '%s\n' "mkrepo [ reponame ] - creates a new repo, then prints the remote url."
+printf '%s\n' "rmrepo [ reponame ] - deletes repo."
+printf '%s\n' "ssh-addkey - use to add an additional valid ssh key."
+printf '%s\n' "ls - lists repos on the server."
+printf '%s\n' "help - print this message."
+printf '%s\n' "clear - clears screen."
+printf '\n'
+exit 0

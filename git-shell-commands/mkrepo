@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# make directory
+mkdir ~/$1.git
+
+# init git
+git init --bare ~/$1.git >/dev/null 2>&1
+
+# print git repo url
+printf "ssh://git@$(hostname -f)/~/$1.git\n"
+
+exit 0
